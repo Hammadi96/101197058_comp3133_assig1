@@ -15,14 +15,14 @@ type test {
 }
 type listing {
     id: ID!
-    listing_id: String!,
-    listing_title: String!,
-    description: String!,
-    street: String!,
-    city: String!,
-    postal_code: String!,
-    price: String!,
-    email: String!,
+    listing_id: String!
+    listing_title: String!
+    description: String!
+    street: String!
+    city: String!
+    postal_code: String!
+    price: String!
+    email: String!
     username: String!
 }
 type user {
@@ -37,6 +37,7 @@ type user {
 
 type Mutation {
     createtest(name: String!): test!
+    
     createlisting(
         listing_id: String!,
         listing_title: String!,
@@ -48,6 +49,7 @@ type Mutation {
         email: String!,
         username: String!
     ): listing!
+
     createuser(
         username: String!,
         firstname: String!,

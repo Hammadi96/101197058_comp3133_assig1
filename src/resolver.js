@@ -1,13 +1,13 @@
-import { listing } from "./models/user";
+import { listing } from "./models/listing";
 import { test } from "./models/test";
-import { user } from "./models/listing";
+import { user } from "./models/user";
 
 export const resolvers = {
     Query: {
         helloWorld: () => 'hello world',
         tests: () => test.find(),
+        listings: () => listing.find(),
         users: () => user.find(),
-        listings: () => listing.find()
     },
     Mutation: {
         createtest: async (_, { name }) => {
